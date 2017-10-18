@@ -1,7 +1,7 @@
 #pragma once
 class Entity
 {
-private:
+protected:
 	int mHealth;
 	int mDamage;
 	int mArmor;
