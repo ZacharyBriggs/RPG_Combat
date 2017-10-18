@@ -3,12 +3,15 @@ class Entity
 {
 private:
 	int mHealth;
-	int mArmor;
 	int mDamage;
+	int mArmor;
 	char* mName;
 public:
 	Entity();
 	~Entity();
-	void Attack();
-	void Defend();
+	void Attack(Entity* defender);
+	void Defend(int* damage);
+	int GetHP();
+	int GetAtk();
+	int GetArmor();
 };
