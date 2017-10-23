@@ -10,7 +10,7 @@ public:
 	Entity();
 	~Entity();
 	void Attack(Entity* defender);
-	void Defend(int* damage);
+	void Defend();
 	int GetHP();
 	int GetAtk();
 	int GetArmor();

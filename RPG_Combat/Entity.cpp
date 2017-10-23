@@ -14,8 +14,9 @@ void Entity::Attack(Entity* defender)
 	int newDamage = mDamage - defender->mArmor;
 	defender->mHealth -= newDamage;
 }
-void Entity::Defend(int* damage)
+void Entity::Defend()
 {
+	mArmor += (mArmor/2);
 }
 int Entity::GetHP()
 {

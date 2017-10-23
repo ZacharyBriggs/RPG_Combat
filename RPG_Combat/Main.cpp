@@ -1,16 +1,15 @@
 #include "Entity.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Game.h"
 int main()
 {
-	Entity* ManA = new Entity();
-	Entity* ManB = new Entity();
-	Player* Adventurer = new Player();
-	Enemy* Slime = new Enemy();
-	ManA->GetHP();
-	ManA->GetAtk();
-	ManA->GetArmor();
-	ManA->Attack(ManB);
-	Adventurer->Attack(Slime);
-	Slime->Attack(Adventurer);
+	Game newGame;
+	while (true)
+	{
+		std::cout << "Pick an action.\n";
+		char action;
+		std::cin >> action;
+		newGame.Turn(action);
+	}
 }
