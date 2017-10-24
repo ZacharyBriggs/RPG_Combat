@@ -11,4 +11,5 @@ public:
 	Game();
 	~Game();
 	void Turn(char action);
+	bool DeathCheck();
 };

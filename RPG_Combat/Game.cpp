@@ -18,3 +18,16 @@ void Game::Turn(char action)
 		mPlayer->Defend();
 	mEnemy->Attack(mPlayer);
 }
+bool Game::DeathCheck()
+{
+	if (mPlayer->GetHP() <= 0)
+	{
+		std::cout << "You died!";
+		return true;
+	}
+	else if (mEnemy->GetHP() <= 0)
+	{
+		std::cout << "You won!";
+		return true;
+	}
+}

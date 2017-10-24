@@ -5,7 +5,7 @@
 int main()
 {
 	Game newGame;
-	while (true)
+	while (newGame.DeathCheck() != true)
 	{
 		std::cout << "Pick an action.\n";
 		char action;
