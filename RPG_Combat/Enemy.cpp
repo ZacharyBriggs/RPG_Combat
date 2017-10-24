@@ -9,3 +9,6 @@ Enemy::Enemy()
 Enemy::~Enemy()
 {
 }
+void Enemy::DisplayEnemy()
+{
+}
