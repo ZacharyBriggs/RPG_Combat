@@ -7,6 +7,13 @@ Game::Game()
 Game::~Game()
 {
 }
+void Game::EnemyGraphics()
+{
+	std::fstream file;
+	file.open("Enemy.txt", std::ios_base::in);
+	file >> getline(char* s, streamsize 100);
+	file.close();
+}
 void Game::Turn(char action)
 {
 	std::cout << mPlayer->GetHP() << std::endl;

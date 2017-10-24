@@ -4,11 +4,8 @@ Enemy::Enemy()
 	mHealth = 10;
 	mDamage = 2;
 	mArmor = 0;
-	mName = "Slime";
+	mName = "Void";
 }
 Enemy::~Enemy()
-{
-}
-void Enemy::DisplayEnemy()
 {
 }
