@@ -7,6 +7,7 @@ private:
 	int mExpNxtLvl;
 public:
 	int mExp;
+	int mGold;
 	Player();
 	~Player();
 	void LevelUp();

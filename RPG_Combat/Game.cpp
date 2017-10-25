@@ -25,7 +25,7 @@ void Game::Turn(char action,Enemy* enemy)
 
 	enemy->Attack(mPlayer);
 }
-bool Game::DeathCheck()
+bool Game::DeathCheck(Enemy* enemy)
 {
 	if (mPlayer->GetHP() <= 0)
 	{
@@ -35,7 +35,8 @@ bool Game::DeathCheck()
 	else if (mEnemy->GetHP() <= 0)
 	{
 		std::cout << "You won!";
-		mPlayer->mExp += mEnemy->GetExp();
+		mPlayer->mExp += enemy->GetExp();
+		mPlayer->mGold += enemy->GetGoldAmount();
 		return true;
 	}
 	return false;

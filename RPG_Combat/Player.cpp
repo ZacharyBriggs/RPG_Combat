@@ -8,6 +8,7 @@ Player::Player()
 	mLevel = 1;
 	mExp = 0;
 	mExpNxtLvl = 10;
+	mGold = 0;
 	mName = "Adventurer";
 }
 Player::~Player()

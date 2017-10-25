@@ -15,3 +15,7 @@ int Enemy::GetExp()
 {
 	return mExpDrop;
 }
+int Enemy::GetGoldAmount()
+{
+	return mGoldDrop;
+}

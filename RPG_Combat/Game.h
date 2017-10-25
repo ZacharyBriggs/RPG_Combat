@@ -13,5 +13,5 @@ public:
 	~Game();
 	void LevelUp();
 	void Turn(char action,Enemy* enemy);
-	bool DeathCheck();
+	bool DeathCheck(Enemy* enemy);
 };

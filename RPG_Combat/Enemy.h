@@ -10,4 +10,5 @@ public:
 	Enemy();
 	~Enemy();
 	int GetExp();
+	int GetGoldAmount();
 };
