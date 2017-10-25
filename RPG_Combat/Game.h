@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Player.h"
 #include "Enemy.h"
-#include <fstream>
 
 class Game
 {

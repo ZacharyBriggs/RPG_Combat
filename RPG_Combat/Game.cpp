@@ -7,13 +7,6 @@ Game::Game()
 Game::~Game()
 {
 }
-void Game::EnemyGraphics()
-{
-	std::fstream file;
-	file.open("Enemy.txt", std::ios_base::in);
-	file >> getline(char* s, streamsize 100);
-	file.close();
-}
 void Game::Turn(char action)
 {
 	std::cout << mPlayer->GetHP() << std::endl;
@@ -23,6 +16,8 @@ void Game::Turn(char action)
 		mPlayer->Attack(mEnemy);
 	if (action == 'd')
 		mPlayer->Defend();
+	if (action == 'r')
+
 	mEnemy->Attack(mPlayer);
 }
 bool Game::DeathCheck()
@@ -37,4 +32,5 @@ bool Game::DeathCheck()
 		std::cout << "You won!";
 		return true;
 	}
+	return false;
 }

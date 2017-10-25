@@ -5,7 +5,6 @@
 int main()
 {
 	Game newGame;
-	newGame.EnemyGraphics();
 	while (newGame.DeathCheck() != true)
 	{
 		std::cout << "Pick an action.\n";
