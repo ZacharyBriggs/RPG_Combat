@@ -12,4 +12,5 @@ int main()
 		std::cin >> action;
 		newGame.Turn(action);
 	}
+	newGame.LevelUp();
 }

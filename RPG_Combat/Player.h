@@ -4,8 +4,10 @@ class Player : public Entity
 {
 private:
 	int mLevel;
-	int mExpNeeded;
+	int mExpNxtLvl;
 public:
+	int mExp;
 	Player();
 	~Player();
+	void LevelUp();
 };

@@ -3,22 +3,27 @@ Game::Game()
 {
 	mPlayer = new Player;
 	mEnemy = new Enemy;
+	mSlime = new Slime;
 }
 Game::~Game()
 {
 }
-void Game::Turn(char action)
+void Game::LevelUp()
+{
+	mPlayer->LevelUp();
+}
+void Game::Turn(char action,Enemy* enemy)
 {
 	std::cout << mPlayer->GetHP() << std::endl;
-	std::cout << mEnemy->GetHP() << std::endl;
+	std::cout << enemy->GetHP() << std::endl;
 	system("pause");
 	if (action == 'a')
-		mPlayer->Attack(mEnemy);
+		mPlayer->Attack(enemy);
 	if (action == 'd')
 		mPlayer->Defend();
 	if (action == 'r')
 
-	mEnemy->Attack(mPlayer);
+	enemy->Attack(mPlayer);
 }
 bool Game::DeathCheck()
 {
@@ -30,6 +35,7 @@ bool Game::DeathCheck()
 	else if (mEnemy->GetHP() <= 0)
 	{
 		std::cout << "You won!";
+		mPlayer->mExp += mEnemy->GetExp();
 		return true;
 	}
 	return false;

@@ -5,7 +5,13 @@ Enemy::Enemy()
 	mDamage = 2;
 	mArmor = 0;
 	mName = "Void";
+	mExpDrop = 1;
+	mGoldDrop = 1;
 }
 Enemy::~Enemy()
 {
+}
+int Enemy::GetExp()
+{
+	return mExpDrop;
 }

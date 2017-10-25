@@ -1,17 +1,17 @@
 #pragma once
-#include <iostream>
 #include "Player.h"
-#include "Enemy.h"
+#include "Slime.h"
 
 class Game
 {
 private:
 	Player* mPlayer;
 	Enemy* mEnemy;
+	Slime* mSlime;
 public:
 	Game();
 	~Game();
-	void EnemyGraphics();
-	void Turn(char action);
+	void LevelUp();
+	void Turn(char action,Enemy* enemy);
 	bool DeathCheck();
 };
